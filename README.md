@@ -132,11 +132,12 @@ HAL_I2C_Slave_Receive(&hi2c2 ,(uint8_t *)rx_pos, 9,100);
 This is just a very simple implementation of using I2C in STM32. You can use other HAL_I2C functions to achieve more using interrputs, I2C registers, etc.
 
 The received bytes need to be patched together to make a `int32_t`:
+
 ```C
 pos_left = (int32_t) (rx_pos[1]<<24) + (rx_pos[2]<<16) + (rx_pos[3]<<8) + rx_pos[4];
 pos_right = (int32_t) (rx_pos[5]<<24) + (rx_pos[6]<<16) + (rx_pos[7]<<8) + rx_pos[8];
 ```
+
 Each byte corresponds 8 bits of the `int32_t` type, so they need to be shifted to the right place before added together. 
 
-The received signal can then be used for processing, like making a custom speed or position regulator
-
+The received signal can then be used for other stuff, like making a custom speed or position regulator.
