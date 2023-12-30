@@ -8,6 +8,7 @@ A python script for reading motor data, reading and sending data from the ev3 br
 
 Result: <https://youtu.be/Yv2TfS-jht4?si=X5JMjH5inVPc9l42>
 
+# Contents
 
 1. [EV3 configuration](#ev3-configuration)
    - [Firmware install](#firmware-install)
@@ -17,6 +18,8 @@ Result: <https://youtu.be/Yv2TfS-jht4?si=X5JMjH5inVPc9l42>
 3. [Codes](#codes)
    - [On the EV3 brick](#on-the-ev3-brick)
    - [On the STM32 board](#on-the-stm32-board)
+
+---
 
 # EV3 configuration
 
