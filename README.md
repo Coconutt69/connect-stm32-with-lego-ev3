@@ -9,7 +9,14 @@ A python script for reading motor data, reading and sending data from the ev3 br
 Result: <https://youtu.be/Yv2TfS-jht4?si=X5JMjH5inVPc9l42>
 
 
-[link](#ev3-configuration)
+1. [EV3 configuration](#ev3-configuration)
+   - [Firmware install](#firmware-install)
+   - [Custom wire](#custom-wire)
+   - [Connecting with computer and uploading codes](#connecting-with-computer-and-uploading-codes)
+2. [STM32 configuration](#stm32-configuration)
+3. [Codes](#codes)
+   - [On the EV3 brick](#on-the-ev3-brick)
+   - [On the STM32 board](#on-the-stm32-board)
 
 # EV3 configuration
 
@@ -79,7 +86,7 @@ Here the stm32's address is set to 0x04, you can change it to whatever you like.
 
 Connect the SCL, SDA and GND pins of the ev3 to the stm32 and they are now ready to exchange data.
 
-# Code
+# Codes
 
 Full codes are in `/ev3/robot.py` and the while loop of `/stm_project/Core/Src/main.c`
 
