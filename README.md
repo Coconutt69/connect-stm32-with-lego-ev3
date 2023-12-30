@@ -8,6 +8,9 @@ A python script for reading motor data, reading and sending data from the ev3 br
 
 Result: <https://youtu.be/Yv2TfS-jht4?si=X5JMjH5inVPc9l42>
 
+
+[link](ev3-configuration)
+
 # EV3 configuration
 
 ## Firmware install
@@ -78,7 +81,7 @@ Connect the SCL, SDA and GND pins of the ev3 to the stm32 and they are now ready
 
 # Code
 
-Full codes are in `/ev3/robot.py` and the while loop of `stm_project/Core/Src/main.c`
+Full codes are in `/ev3/robot.py` and the while loop of `/stm_project/Core/Src/main.c`
 
 Here are some explaination of the codes.
 
@@ -117,6 +120,8 @@ if signal_right > 127:
 Because of how negative `int8_t` are stored, the raw byte data will be a wrap-around of the positive number (-1 to 255, -2 to 254, and so on...) so to convert this byte back to the negative `int` in python we need to subtract it by 256.
 
 Here the recieved data is just a number from -100 to 100, so using one byte is enough. However, if you want to transer other kind of data then the bytes need to be patched together and converted to usable data.
+
+The motor can be run using PWM, or with set speed using the ev3's own PID controller. For more ways to control the LEGO motor see <https://ev3dev-lang.readthedocs.io/projects/python-ev3dev/en/stable/motors.html>
 
 ## On the STM32 board
 
