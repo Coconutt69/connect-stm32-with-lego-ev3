@@ -2,7 +2,7 @@
 
 Exchange data from a STM32 board and Lego EV3 using I2C and SMBus with the EV3 as master and the STM32 board as slave. The EV3 block has ev3dev installed, more info on their documentation: <https://www.ev3dev.org/>
 
-A ready project made for the Nucleo-144 board can be found in `/stm_project` folder, all the added codes for reading and sending data from the stm32 board can be found in file `/src/main.c` of the project. 
+A ready project made for the Nucleo-144 board can be found in `/stm_project` folder, all the added codes for reading and sending data from the stm32 board can be found in file `/stm_project/Core/Src/main.c` of the project. 
 
 A python script for reading motor data, reading and sending data from the ev3 block can be found in `/ev3`.
 
@@ -77,3 +77,7 @@ Here the stm32's address is set to 0x04, you can change it to whatever you like.
 Connect the SCL, SDA and GND pins of the ev3 to the stm32 and they are now ready to exchange data.
 
 # Code
+
+Full codes are in `/ev3/robot.py` and `stm_project/Core/Src/main.c`
+
+## On the EV3 brick
