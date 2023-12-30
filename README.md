@@ -106,7 +106,7 @@ tx_speed[:2] = speed_left[:]
 tx_speed[2:] = speed_right[:]
 ```
 
-Data read from motors are stored in `int`. In this case the speed values of the motors never go pass a few thousands, so we only use convert 2 last bytes of the full 4 bytes of `int`. Then those bytes are passed to the tx_speed buffer, two first bytes are for the left motor, two last bytes are for the right motor. For angle values they can go up very high so we will use all 4 bytes. 
+Data read from motors are stored in `int`. In this case the speed values of the motors never go pass a few thousands, so we only convert 2 last bytes of the full 4 bytes of `int`. Then those bytes are passed to the tx_speed buffer, two first bytes are for the left motor, two last bytes are for the right motor. For angle values they can go up very high so we will use all 4 bytes. 
 
 We use `write_i2c_block_data` and `read_i2c_block_data` to trasnmit and receive bytes:
 
@@ -153,6 +153,6 @@ pos_left = (int32_t) (rx_pos[1]<<24) + (rx_pos[2]<<16) + (rx_pos[3]<<8) + rx_pos
 pos_right = (int32_t) (rx_pos[5]<<24) + (rx_pos[6]<<16) + (rx_pos[7]<<8) + rx_pos[8];
 ```
 
-Each byte corresponds 8 bits of the `int32_t` type, so they need to be shifted to the right place before added together. 
+Each byte corresponds to 8 bits of the `int32_t` type, so they need to be shifted to the right place before added together. 
 
 The received signal can then be used for other stuff, like making a custom speed or position regulator.
