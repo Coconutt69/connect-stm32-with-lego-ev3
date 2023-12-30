@@ -9,7 +9,7 @@ A python script for reading motor data, reading and sending data from the ev3 br
 Result: <https://youtu.be/Yv2TfS-jht4?si=X5JMjH5inVPc9l42>
 
 
-[link](ev3-configuration)
+[link](#ev3-configuration)
 
 # EV3 configuration
 
