@@ -28,11 +28,19 @@ To go back to the original firmware just turn off the ev3 and unplug the SD card
 
 To connect witht the stm board you will need to make a new wire with one end as the ev3's input port connector, the other end are jumper wires. The ev3's input uses RJ12 ports, but the connector is modified so that it is not compatible with normal RJ12 wires, only LEGO wires:
 
-![image](https://github.com/Coconutt69/stm32-ev3/assets/137206541/d6d380fb-92e9-4d6d-ab0a-3f73bdf3550a)
+![image](https://github.com/Coconutt69/stm32-ev3/assets/137206541/e1cf949e-6b04-4e8f-8c43-3a3d854c6e02)
 
-RJ12(left) vs LEGO Wire(right)
+RJ12 (left) vs LEGO Wire (right)
 
 So you can either cut up a LEGO-compatible wire, or use a normal RJ12 connector and just remove the locking mechanism (like I did). The pins for I2C looks like this:
+
+![input](/ev3/input_port.jpg)
+
+We only use the SCL, SDA and GND wire for I2C. 4-4.3V pin can also be used to power the stm board if it does support that. 
+
+This is how my wire looks like:
+
+![image](https://github.com/Coconutt69/stm32-ev3/assets/137206541/3fb3d083-9ccd-4e0f-848f-f9933518acf1)
 
 ## Connecting with computer and uploading codes
 
